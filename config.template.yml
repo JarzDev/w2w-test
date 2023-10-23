@@ -1,0 +1,10 @@
+appName: BUILD_APP_NAME
+region: us-east-1
+stage: v1  # BUILD_STAGE
+env: BUILD_ENV
+role: BUILD_LAMBDA_ROLE_ARN
+accessControlAllowOrigin: "*"
+apiId: BUILD_API_ID
+apiRootId: BUILD_API_ROOT_ID
+ssmPrefix: BUILD_SSM_PREFIX
+cognitoArn: BUILD_COGNITO_POOL_ARN

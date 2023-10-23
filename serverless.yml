@@ -1,0 +1,42 @@
+service: bach-aws-test
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-2
+
+
+functions:
+  api:
+    handler: src/index.handler
+    events:
+      - httpApi:
+          path: /hola
+          method: get
+
+  envnom: 
+    handler: src/envnom.envnom
+    events:
+      - httpApi:
+          path: /envnom
+          method: post
+
+  contestadofech: 
+    handler: src/contestadofech.contestadofech
+    events:
+      - httpApi:
+          path: /contestadofech
+          method: post
+
+  envrend: 
+    handler: src/envrend.envrend
+    events:
+      - httpApi:
+          path: /envrend
+          method: post
+
+plugins:
+  - serverless-offline
+
+
